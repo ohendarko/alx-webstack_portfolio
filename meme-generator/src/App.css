@@ -98,7 +98,7 @@ body {
   flex-direction: column;
   border-radius: 5px;
   align-items: center;
-  background-color: rgba(248, 244, 244, 0.9);
+  background-color: rgba(248, 244, 244, 0.95);
 }
 
 .texts-box {
