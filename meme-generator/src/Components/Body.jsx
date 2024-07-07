@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {toPng} from 'html-to-image';
+import { toPng } from 'html-to-image';
 
 const Body = () => {
   const [meme, setMeme] = useState({
@@ -10,9 +10,9 @@ const Body = () => {
   const [allMemes, setAllMemes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [uploadedImage, setUploadedImage] = useState(null);
   const memeRef = useRef(null);
-  const downloadLinkRef = useRef(null);
-
+  
   useEffect(() => {
     const apiUrl = `https://api.imgflip.com/get_memes`;
     fetch(apiUrl)
@@ -32,7 +32,13 @@ const Body = () => {
       });
   }, []);
 
-  function getMemeImage() {
+  useEffect(() => {
+    if (allMemes.length > 0) {
+      getRandomMeme();
+    }
+  }, [allMemes]);
+
+  const getRandomMeme = () => {
     const memesArray = allMemes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     const url = memesArray[randomNumber].url;
@@ -40,26 +46,49 @@ const Body = () => {
       ...prevMeme,
       randomImage: url
     }));
-  }
+  };
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setMeme(prevMeme => ({
       ...prevMeme,
       [name]: value
     }));
-  }
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setUploadedImage(file);
+      setMeme(prevMeme => ({
+        ...prevMeme,
+        randomImage: URL.createObjectURL(file)
+      }));
+    }
+  };
+
+  const clearUploadedImage = () => {
+    setUploadedImage(null);
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      randomImage: "https://i.imgflip.com/5c7lwq.png"
+    }));
+  };
 
   const downloadMeme = () => {
-    if (!meme.randomImage) {
+    const captureElement = memeRef.current;
+
+    if (!captureElement) {
       console.error('No image available to download');
       return;
     }
-    toPng(memeRef.current)
+
+    toPng(captureElement)
       .then((dataUrl) => {
         const link = document.createElement('a');
         link.href = dataUrl;
         link.download = 'meme.png';
+        
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -100,18 +129,21 @@ const Body = () => {
             onChange={handleChange}
           />
         </div>
-        <button className='get-image' onClick={getMemeImage}>Get a new image</button>
-        
+        <div className='upload-image'>
+          <p>Upload Image</p>
+          <input type="file" accept="image/*" onChange={handleFileChange} />
+          {uploadedImage && (
+            <button className='clear-image' onClick={clearUploadedImage}>Clear Image</button>
+          )}
+        </div>
+        <button className='get-image' onClick={getRandomMeme}>Get a new image</button>
       </div>
-      <div className='generated' ref={memeRef} style={{ position: 'relative', textAlign: 'center' }}>
-        <img src={meme.randomImage} className='meme-image' alt="Random meme"/>
+      <div className='generated' ref={memeRef}>
+        <img src={meme.randomImage} className='meme-image' alt="Meme" style={{ width: '100%' }} />
         <h2 className='meme-text-top'>{meme.topText}</h2>
         <h2 className='meme-text-bottom'>{meme.bottomText}</h2>
       </div>
-      <div>
-        <button className='download-meme' onClick={downloadMeme}>Download Meme</button>
-        <a ref={downloadLinkRef} style={{ display: 'none' }}>Download</a>
-      </div>
+      <button className='download-meme' onClick={downloadMeme}>Download Meme</button>
     </main>
   );
 }

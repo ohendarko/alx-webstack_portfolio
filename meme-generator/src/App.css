@@ -43,8 +43,17 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+#root {
+  background-image: url('/src/assets/images/background_low-res.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .header {
@@ -80,13 +89,16 @@ body {
 
 /*Body*/
 .body {
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin-top: 73px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 53px;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  border-radius: 5px;
   align-items: center;
+  background-color: rgba(248, 244, 244, 0.9);
 }
 
 .texts-box {
@@ -117,6 +129,51 @@ input:focus {
   border: 2px solid rgb(73, 4, 81);
 }
 
+.upload-image {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin:  2px 50px 30px 50px;
+}
+
+.upload-image > input {
+  font-size: medium;
+}
+
+.upload-image > p {
+  margin-block: 5px;
+}
+
+.clear-image {
+  text-align: center;
+  background: linear-gradient(90deg, #580477 1.18%, #9027b9 100%);
+  color: white;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 5s ease-in-out;
+  border: none;
+  width: 50%;
+  padding-block: 5px;
+  align-self: center;
+  margin-top: 5px;
+  border-radius: 1cap;
+}
+
+.clear-image:active {
+  opacity: 0.6;
+  font-size: 1.18rem;
+  padding-block: 4px;
+  width: 58%;
+}
+
+#file-upload-button {
+  background: linear-gradient(30deg, #580477 41.18%, #c45405 100%);
+  color: white;
+}
+
 .get-image {
   text-align: center;
   background: linear-gradient(90deg, #580477 1.18%, #9027b9 100%);
@@ -145,8 +202,10 @@ input:focus {
   margin-top: 20px;
 }
 
+button:hover,
 .get-image:hover {
   background: linear-gradient(30deg, #580477 41.18%, #c45405 100%);
+  cursor: pointer;
 }
 
 .download-meme:hover {
