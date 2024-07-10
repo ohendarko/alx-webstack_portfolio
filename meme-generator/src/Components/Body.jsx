@@ -133,7 +133,7 @@ const Body = () => {
           <p>Upload Image</p>
           <input type="file" accept="image/*" onChange={handleFileChange} />
           {uploadedImage && (
-            <button className='Clear-image' onClick={clearUploadedImage}>Clear Image</button>
+            <button className='clear-image' onClick={clearUploadedImage}>Clear Image</button>
           )}
         </div>
         <button className='get-image' onClick={getRandomMeme}>Get a new image</button>
