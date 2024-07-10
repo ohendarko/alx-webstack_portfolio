@@ -18,7 +18,7 @@ const Body = () => {
     fetch(apiUrl)
       .then(res => {
         if (!res.ok) {
-          thr new Error('Network response was not ok');
+          throw new Error('Network response was not ok');
         }
         return res.json();
       })
