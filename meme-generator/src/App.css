@@ -51,7 +51,7 @@ body {
 }
 
 #root {
-  background-image: url('./assets/images/background_low-res.png');
+  background-image: url('/src/assets/images/background_low-res.png');
   background-size: cover;
   background-position: center;
 }
@@ -135,14 +135,14 @@ input:focus {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin:  2px 50px 30px 50px;
+  margin: 2px 50px 30px 50px;
 }
 
-.upload-image > input {
+.upload-image>input {
   font-size: medium;
 }
 
-.upload-image > p {
+.upload-image>p {
   margin-block: 5px;
 }
 
@@ -246,17 +246,17 @@ button:active {
   font-size: 5vw;
   text-align: center;
   font-family: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-shadow: 
-    2px 2px 0 #000, 
-   -2px -2px 0 #000,
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
     2px -2px 0 #000,
-   -2px 2px 0 #000,
+    -2px 2px 0 #000,
     2px 0 0 #000,
-   -2px 0 0 #000,
+    -2px 0 0 #000,
     0 2px 0 #000,
     0 -2px 0 #000;
-    margin: 0;
-    opacity: 0.95;
+  margin: 0;
+  opacity: 0.95;
 }
 
 .meme-text-top {
@@ -287,37 +287,50 @@ button:active {
   z-index: 2000;
 }
 
-.footer > p {
+.footer>p {
   margin: 0;
   margin-right: 40px;
 }
 
 .footer-content {
-  max-width: 1200px; /* Max width of the content */
-  margin: 0; /* Center align the content horizontally */
+  max-width: 1200px;
+  /* Max width of the content */
+  margin: 0;
+  /* Center align the content horizontally */
 }
 
 .social-media-links {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center align the items */
+  list-style: none;
+  /* Remove bullet points */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+  display: flex;
+  /* Use flexbox */
+  justify-content: center;
+  /* Center align the items */
 }
 
 .social-media-links li {
-  margin: 0 10px; /* Margin between each icon */
+  margin: 0 10px;
+  /* Margin between each icon */
 }
 
 .social-media-links a {
-  color: #fff; /* Icon color */
-  font-size: 24px; /* Icon size */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s; /* Smooth color transition */
+  color: #fff;
+  /* Icon color */
+  font-size: 24px;
+  /* Icon size */
+  text-decoration: none;
+  /* Remove underline from links */
+  transition: color 0.3s;
+  /* Smooth color transition */
 }
 
 .social-media-links a:hover {
-  color: #6bb9eb; /* Change icon color on hover */
+  color: #6bb9eb;
+  /* Change icon color on hover */
 }
 
 .social-media-links svg {
@@ -334,4 +347,5 @@ button:active {
 .footer-text {
   margin-right: 10px;
 }
+
 /*End of footer*/
