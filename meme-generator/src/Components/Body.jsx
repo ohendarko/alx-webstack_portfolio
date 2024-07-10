@@ -3,7 +3,7 @@ import { toPng } from 'html-to-image';
 
 const Body = () => {
   const [meme, setMeme] = useState({
-    topText: "", 
+    topText: "meme", 
     bottomText: "",
     randomImage: "https://i.imgflip.com/5c7lwq.png"
   });
