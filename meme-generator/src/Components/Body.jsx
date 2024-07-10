@@ -14,7 +14,7 @@ const Body = () => {
   const memeRef = useRef(null);
   
   useEffect(() => {
-    const apiUrl = `https://api.imgflip.com/get_meme`;
+    const apiUrl = `https://api.imgflip.com/get_memes`;
     fetch(apiUrl)
       .then(res => {
         if (!res.ok) {
