@@ -310,6 +310,7 @@ button:active {
   /* Use flexbox */
   justify-content: center;
   /* Center align the items */
+  text-align: center;
 }
 
 .social-media-links li {
@@ -327,6 +328,7 @@ button:active {
   transition: color 0.3s;
   /* Smooth color transition */
 }
+
 
 .social-media-links a:hover {
   color: #6bb9eb;
@@ -347,9 +349,15 @@ button:active {
 .footer-text {
   margin-right: 10px;
 }
-<<<<<<< HEAD
 
-/*End of footer*/
-=======
-/*End of footer*/
->>>>>>> 360f3cf1835d8f2aa6e71335a8355f96bef97367
+.blue svg {
+  fill: #1da1f2;
+}
+
+.black svg {
+  fill: #1f1515;
+}
+
+.red svg {
+  fill: rgb(240, 70, 70) !important;
+}
