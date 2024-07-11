@@ -361,3 +361,9 @@ button:active {
 .red svg {
   fill: rgb(240, 70, 70) !important;
 }
+
+.blue,
+.black,
+.red {
+  border-left: 2px solid white;
+}
