@@ -3,7 +3,6 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className='footer'>
-      <p className='footer-text'><small>Built by: Kwadwo Ohene Darko</small></p>
       <div className="footer-content">
       <ul className="social-media-links">
         <li>
