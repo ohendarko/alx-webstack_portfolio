@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className='footer'>
       <div className="footer-content">
       
-        <ul className="social-media-links">
+        <ul className="social-media-links scroll">
         Contributors:
           <div className='social-media-links'>
             <li>

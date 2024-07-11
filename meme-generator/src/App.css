@@ -311,8 +311,12 @@ button:active {
   justify-content: center;
   /* Center align the items */
   text-align: center;
+  flex-wrap: wrap;
 }
-
+.scroll{
+  /* overflow-x: auto;
+  width: 100%; */
+}
 .social-media-links li {
   margin: 0 10px;
   /* Margin between each icon */
