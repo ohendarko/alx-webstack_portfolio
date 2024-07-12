@@ -12,7 +12,7 @@ const Header = () => {
         </NavLink>
         
         <NavLink to="/about" className='header-text-right'>
-          <small>About Us</small>
+          <small>Meet The Team</small>
         </NavLink>
         {/* <p className='header-text-right'><small>React Course - Project 3</small></p> */}
       </header>
