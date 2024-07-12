@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
 
-          <div className='social-media-links blue'>
+          <div className='social-media-links'>
             {/* FOUR */}
             <li>
               <a href="https://twitter.com/ohenebarushtyme?s=09" target="_blank">

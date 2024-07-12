@@ -1,16 +1,23 @@
 import React from 'react';
 import Logo from '../assets/meme-Logo.png';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div>
       <header className='header'>
         <img src={Logo} alt="meme-logo" className='logo' />
-        <h2 className='header-text-left'>Meme Generator</h2>
+        <NavLink to="/" className='header-text-left'>
+          <h2>Meme Generator</h2>
+        </NavLink>
+        
+        <NavLink to="/about" className='header-text-right'>
+          <small>About Us</small>
+        </NavLink>
         {/* <p className='header-text-right'><small>React Course - Project 3</small></p> */}
       </header>
     </div>
   )
 }
 
-export default Header
+export default Header;

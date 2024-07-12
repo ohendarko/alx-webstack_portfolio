@@ -1,20 +1,18 @@
 import React from 'react';
-import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Body from './Components/Body';
-import { Analytics } from "@vercel/analytics/react"
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import MainPage from './MainPage';
+import AboutUs from './Components/AboutUs';
 
-function App() {
-
-  return (
-    <>
-      <Header />
-      <Body />
-      <Footer /> 
-      <Analytics/>
-    </>
-  )
-}
+const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements (
+      <Route>
+        <Route index path='/' element={<MainPage />} />
+        <Route path='/about' element={<AboutUs />} />
+      </Route>
+    )
+  );
+  return <RouterProvider router={router} />
+};
 
 export default App;
