@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Prince from '../assets/Prince.png';
+import Kwadwo from '../assets/Kwadwo.png';
 
 const About = () => {
   return (
@@ -7,7 +9,7 @@ const About = () => {
         <h2>About Us</h2>
         <div className="member">
           <div className="profile">
-            <img src="/src/assets/Prince.png" alt="Dr. Appiagyei Osei" className="pic" />
+            <img src={Prince} alt="Dr. Appiagyei Osei" className="pic" />
             <div className="text">
               <h3>Dr. Appiagyei Osei</h3>
               <h4>Front-end Engineer</h4>
@@ -70,7 +72,7 @@ const About = () => {
 
         <div className="member">
           <div className="profile">
-            <img src="/src/assets/Kwadwo.png" alt="Kwadwo Darko" className="pic" />
+            <img src={Kwadwo} alt="Kwadwo Darko" className="pic" />
             <div className="text">
               <h3>Dr. Kwadwo Ohene Darko</h3>
               <h4>Front-end Engineer/REACT Specialist</h4>
