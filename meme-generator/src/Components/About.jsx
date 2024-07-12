@@ -11,7 +11,7 @@ const About = () => {
             <div className="text">
               <h3>Dr. Appiagyei Osei</h3>
               <h4>Front-end Engineer</h4>
-              <div className='social-media-links gray'>
+            <div className='social-media-link gray'>
             {/* FOUR */}
             <li>
               <a href="https://twitter.com/ohenebarushtyme?s=09" target="_blank">
@@ -43,7 +43,7 @@ const About = () => {
             <div className="text">
               <h3>Kwame Adobaw</h3>
               <h4>Back-end Engineer</h4>
-              <div className='social-media-links red'>
+              <div className='social-media-link red'>
             {/* THREE */}
             <li>
               <a href="https://twitter.com/kakrab_a" target="_blank">
@@ -74,7 +74,7 @@ const About = () => {
             <div className="text">
               <h3>Dr. Kwadwo Ohene Darko</h3>
               <h4>Front-end Engineer/REACT Specialist</h4>
-              <div className='social-media-links'>
+              <div className='social-media-link'>
             <li>
               <a href="https://x.com/ohene_kwadwo" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
@@ -105,7 +105,7 @@ const About = () => {
             <div className="text">
               <h3>Ayanda Ngubane</h3>
               <h4>Project Manager</h4>
-              <div className='social-media-links black'>
+              <div className='social-media-link black'>
             {/* TWO */}
             <li>
               <a href="https://twitter.com/AyandaSithabiso" target="_blank">

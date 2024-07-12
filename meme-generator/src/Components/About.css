@@ -32,7 +32,7 @@ h4, h3 {
   display: flex;
 }
 
-.social-media-links {
+.social-media-link {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -56,10 +56,49 @@ h4, h3 {
   justify-content: flex-end;
 }
 
+.social-media-link svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #fff;
+  transition: fill 0.3s;
+  margin: 5px;
+}
+
+
 .red svg{
   fill: rgb(78, 2, 2);
 }
 
 .gray svg {
   fill: rgb(81, 81, 81);
+}
+
+.social-media-links li {
+  margin: 0 10px;
+}
+
+.social-media-link a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.social-media-link a:hover {
+  color: #6bb9eb;
+  /* Change icon color on hover */
+}
+
+
+.social-media-link a:hover svg {
+  fill: #1da1f2;
+}
+
+.black svg {
+ fill: black;
+}
+
+a {
+  color: white;
 }
