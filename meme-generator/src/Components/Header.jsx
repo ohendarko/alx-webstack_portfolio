@@ -7,10 +7,13 @@ const Header = () => {
     <div>
       <header className='header'>
         <img src={Logo} alt="meme-logo" className='logo' />
-        <NavLink to="/" className='header-text-left'>
-          <h2>Meme Generator</h2>
-        </NavLink>
-        
+        <div className='bottom'>
+          <NavLink to="/" className='header-text-left'>
+            <h2>Meme Generator</h2>
+          </NavLink>
+        </div>
+
+
         <NavLink to="/about" className='header-text-right'>
           <small>Meet The Team</small>
         </NavLink>

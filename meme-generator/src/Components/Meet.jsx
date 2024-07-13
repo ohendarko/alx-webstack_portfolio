@@ -6,18 +6,12 @@ import Kwadwo from '../assets/Kwadwo.png';
 const Meet = () => {
   return (
     <div>
-      <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
-  </nav>
   <section class="about-us">
     <h2>About Us</h2>
     <div class="team">
       <div class="member">
         <img src={Prince} alt="Dr. Appiagyei Osei" class="pic" />
-        <div class="text">
+        <div class="texts">
           <h3>Dr. Appiagyei Osei</h3>
           <h5>Front-end Engineer</h5>
           <div className='social-media-link gray'>
@@ -44,7 +38,7 @@ const Meet = () => {
       </div>
       <div class="member">
         <img src="src/assets/Kwame" alt="Kwame Adobaw" class="pic" />
-        <div class="text">
+        <div class="texts">
           <h3>Kwame Adobaw</h3>
           <h5>Back-end Engineer</h5>
           <div className='social-media-link red'>
@@ -71,7 +65,7 @@ const Meet = () => {
       </div>
       <div class="member">
         <img src={Kwadwo} alt="Kwadwo Darko" class="pic" />
-        <div class="text">
+        <div class="texts">
           <h3>Dr. Kwadwo Ohene Darko</h3>
           <h5>Front-end Engineer/REACT Specialist</h5>
           <div className='social-media-link blue'>
@@ -97,7 +91,7 @@ const Meet = () => {
       </div>
       <div class="member">
         <img src="assets/Ayanda.jpg" alt="Ayanda Ngubane" class="pic" />
-        <div class="text">
+        <div class="texts">
           <h3>Ayanda Ngubane</h3>
           <h5>Project Manager</h5>
           <div className='social-media-link black'>
