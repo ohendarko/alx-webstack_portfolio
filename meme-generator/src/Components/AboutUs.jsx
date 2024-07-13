@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from './Header';
-import About from './About';
-import './About.css';
+// import About from './About';
+import Meet from './Meet';
+import './styles.css';
+// import './About.css';
 
 const AboutUs = () => {
   return (
     <>
       <Header />
-      <About />
+      <Meet />
     </>
   )
 }
