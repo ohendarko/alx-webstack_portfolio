@@ -1,6 +1,7 @@
 import React from 'react';
 import Prince from '../assets/Prince.png';
 import Kwadwo from '../assets/Kwadwo.png';
+import Ayanda from '../assets/Ayanda.png';
 
 
 const Meet = () => {
@@ -90,7 +91,7 @@ const Meet = () => {
         </div>
       </div>
       <div class="member">
-        <img src="assets/Ayanda.jpg" alt="Ayanda Ngubane" class="pic" />
+        <img src={Ayanda} alt="Ayanda Ngubane" class="pic" />
         <div class="texts">
           <h3>Ayanda Ngubane</h3>
           <h5>Project Manager</h5>
