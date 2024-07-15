@@ -22,8 +22,6 @@ const Meet = () => {
   return (
   <div>
   <section class="about-us">
-  Go to:
-  <a href="#Ayanda">Ayanda</a>
     <h2>About Us</h2>
     <div class="team">
       <div class="member" id='Prince'>
