@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Prince from '../assets/Prince.png';
 import Kwadwo from '../assets/Kwadwo.png';
 import Ayanda from '../assets/Ayanda.png';
@@ -6,9 +7,23 @@ import Kwame from '../assets/Kwame.png';
 
 
 const Meet = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
-    <div>
+  <div>
   <section class="about-us">
+  Go to:
+  <a href="#Ayanda">Ayanda</a>
     <h2>About Us</h2>
     <div class="team">
       <div class="member" id='Prince'>

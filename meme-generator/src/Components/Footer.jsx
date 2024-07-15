@@ -23,9 +23,6 @@ const Footer = () => {
         <NavLink to="/about#Ayanda" className='header-text-left'>
           <img src={Ayanda} alt="Ayanda" className="foot-pic" />
         </NavLink>
-
-
-
         </ul>
       </div>
     </footer>
