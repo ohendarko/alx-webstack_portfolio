@@ -7,6 +7,9 @@ body {
   flex-direction: column;
   align-content: center;
 }
+a {
+  margin: 0px;
+}
 
 #root {
   background-image: url('/src/assets/images/background_low-res.png');
@@ -46,7 +49,6 @@ body {
 .header-text-left {
   display: flex;
   margin-left: 10px !important;
-  margin-bottom: 10px !important;
   color: white;
   text-decoration: none;
   align-self: center;
@@ -358,4 +360,11 @@ button:active {
 .black,
 .red {
   border-left: 2px solid white;
+}
+
+.foot-pic {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  object-fit: cover;
 }

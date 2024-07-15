@@ -11,7 +11,7 @@ const Meet = () => {
   <section class="about-us">
     <h2>About Us</h2>
     <div class="team">
-      <div class="member">
+      <div class="member" id='Prince'>
         <img src={Prince} alt="Dr. Appiagyei Osei" class="pic" />
         <div class="texts">
           <h3>Dr. Appiagyei Osei</h3>
@@ -38,7 +38,7 @@ const Meet = () => {
           
         </div>
       </div>
-      <div class="member">
+      <div class="member" id='Kwame'>
         <img src={Kwame} alt="Kwame Adobaw" class="pic" />
         <div class="texts">
           <h3>Kwame Adobaw</h3>
@@ -65,7 +65,7 @@ const Meet = () => {
           
         </div>
       </div>
-      <div class="member">
+      <div class="member" id='Kwadwo'>
         <img src={Kwadwo} alt="Kwadwo Darko" class="pic" />
         <div class="texts">
           <h3>Dr. Kwadwo Ohene Darko</h3>
@@ -91,7 +91,7 @@ const Meet = () => {
           
         </div>
       </div>
-      <div class="member">
+      <div class="member" id='Ayanda'>
         <img src={Ayanda} alt="Ayanda Ngubane" class="pic" />
         <div class="texts">
           <h3>Ayanda Ngubane</h3>
